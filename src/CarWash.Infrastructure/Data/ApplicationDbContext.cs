@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using CarWash.Core.Entities;
 
-namespace CarWash.Api.Data
+namespace CarWash.Infrastructure.Data
 {
     public class ApplicationDbContext : DbContext
     {

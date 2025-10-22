@@ -1,28 +1,29 @@
 version: '3.8'
 
 services:
-  carwash-api:
-    image: carwash-api:latest
-    build:
-      context: ./src/CarWash.Api
-      dockerfile: Dockerfile
-    ports:
-      - "5000:80"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    depends_on:
-      - db
+  # (Provavelmente você já tem o serviço da sua API aqui)
+  # carwash.api:
+  #   image: ${DOCKER_REGISTRY-}carwashapi
+  #   build:
+  #     context: .
+  #     dockerfile: src/CarWash.Api/Dockerfile
+  #   ports:
+  #     - "8080:80"
+  #   depends_on:
+  #     - postgres-db # Faz a API esperar o banco subir
 
-  db:
-    image: postgres:latest
+  # Serviço do Banco de Dados PostgreSQL
+  postgres-db:
+    image: postgres:15-alpine # Você pode usar uma versão mais recente ou específica
+    container_name: carwash_postgres
     environment:
-      POSTGRES_DB: carwash
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sua_senha_segura # <== Use a mesma senha do appsettings.json
+      POSTGRES_DB: carwash_db             # <== O nome do banco que o EF vai procurar
     ports:
-      - "5432:5432"
+      - "5432:5432" # Expõe a porta 5432 do container para a porta 5432 da sua máquina
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data # Garante que os dados não sejam perdidos
 
 volumes:
-  db_data:
+  postgres-data: # Define o volume para persistência

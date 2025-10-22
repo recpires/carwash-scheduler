@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aaG6HHLzZ5O/3QWmU9sc1RTJxfHY9lF594SNyWaM5o8=",
+  "Source": "CarWash.Api",
+  "BasePath": "_content/CarWash.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

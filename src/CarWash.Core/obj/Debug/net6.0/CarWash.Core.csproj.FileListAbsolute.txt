@@ -1,0 +1,15 @@
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.csproj.AssemblyReference.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.AssemblyInfoInputs.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.AssemblyInfo.cs
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.csproj.CoreCompileInputs.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.sourcelink.json
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\bin\Debug\net6.0\CarWash.Core.deps.json
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\bin\Debug\net6.0\CarWash.Core.runtimeconfig.json
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\bin\Debug\net6.0\CarWash.Core.dll
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\bin\Debug\net6.0\CarWash.Core.pdb
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.dll
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\refint\CarWash.Core.dll
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.pdb
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\CarWash.Core.genruntimeconfig.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Core\obj\Debug\net6.0\ref\CarWash.Core.dll

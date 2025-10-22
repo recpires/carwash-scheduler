@@ -1,6 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using CarWash.Infrastructure.Data;
+using CarWash.Infrastructure.Repositories;
+using CarWash.Core.Interfaces;
 
 namespace CarWash.Api
 {

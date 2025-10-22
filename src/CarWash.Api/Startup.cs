@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using CarWash.Api.Data;
+using CarWash.Infrastructure.Data;
 using CarWash.Core.Interfaces;
 using CarWash.Infrastructure.Repositories;
 using CarWash.Api.Services;
@@ -21,12 +21,17 @@ namespace CarWash.Api
         public void ConfigureServices(IServiceCollection services)
         {
             // Connection string via appsettings or env var
-            var conn = Configuration.GetConnectionString("DefaultConnection")
-                       ?? Environment.GetEnvironmentVariable("CONNECTION_STRING");
+var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            // TODO: troque UseSqlServer por UseNpgsql se for usar Postgres
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(conn));
+// Adiciona uma verificação para garantir que não é nulo
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("A string de conexão 'DefaultConnection' não foi encontrada.");
+}
+
+services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString) // <-- Aviso resolvido
+);
 
             services.AddScoped<ISchedulingRepository, SchedulingRepository>();
             services.AddScoped<SchedulingService>();

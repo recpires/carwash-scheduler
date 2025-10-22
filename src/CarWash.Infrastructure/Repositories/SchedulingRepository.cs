@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CarWash.Core.Entities;
 using CarWash.Core.Interfaces;
-using CarWash.Api.Data;
+using CarWash.Infrastructure.Data;
 
 namespace CarWash.Infrastructure.Repositories
 {
