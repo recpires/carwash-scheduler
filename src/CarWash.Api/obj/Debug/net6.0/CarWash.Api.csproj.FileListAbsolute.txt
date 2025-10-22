@@ -1,0 +1,7 @@
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.csproj.AssemblyReference.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.AssemblyInfoInputs.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.AssemblyInfo.cs
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.csproj.CoreCompileInputs.cache
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\_Programacao\carwash-scheduler\src\CarWash.Api\obj\Debug\net6.0\CarWash.Api.MvcApplicationPartsAssemblyInfo.cache
