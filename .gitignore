@@ -1,0 +1,86 @@
+# Visual Studio / Rider
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.idea/
+
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+TestResults/
+artifacts/
+publish/
+**/publish/
+
+# Rider / JetBrains
+*.sln.iml
+
+# ASP.NET Core / .NET
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.log
+
+# NuGet
+*.nupkg
+project.lock.json
+.nuget/
+*.nuget.props
+
+# Entity Framework local DB files
+*.mdf
+*.ldf
+*.db
+
+# User secrets / env
+secrets.json
+.env
+.env.*
+appsettings.*.Local
+appsettings.Development.json
+
+# Node / Angular
+node_modules/
+ClientApp/node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Angular build / TypeScript output
+dist/
+ClientApp/dist/
+ClientApp/out-tsc/
+*.tsbuildinfo
+
+# IDE / Editor
+.vscode/
+.history/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Logs / coverage
+logs/
+*.log
+coverage/
+coverage.*
+
+# Docker image layers / temp
+**/.cache/
+**/tmp/
+
+# Misc
+*.seeddata
