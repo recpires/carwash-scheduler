@@ -1,15 +1,15 @@
-export class VehicleModel {
-    id: number;
-    make: string;
-    model: string;
-    year: number;
-    licensePlate: string;
+export class Vehicle {
+  id: number;
+  make: string;
+  model: string;
+  year: number;
+  licensePlate: string;
 
-    constructor(id: number, make: string, model: string, year: number, licensePlate: string) {
-        this.id = id;
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.licensePlate = licensePlate;
-    }
+  constructor() {
+    this.id = 0;
+    this.make = '';
+    this.model = '';
+    this.year = new Date().getFullYear();
+    this.licensePlate = '';
+  }
 }

@@ -1,1 +1,24 @@
-<p>vehicle-list works!</p>
+<h2>Meus Veículos</h2>
+
+<div *ngIf="vehicles.length === 0">
+    <p>Carregando veículos...</p>
+</div>
+
+<table *ngIf="vehicles.length > 0">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Placa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of vehicles">
+            <td>{{ v.make }}</td>
+            <td>{{ v.model }}</td>
+            <td>{{ v.year }}</td>
+            <td>{{ v.licensePlate }}</td>
+        </tr>
+    </tbody>
+</table>
