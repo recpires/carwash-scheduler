@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarWash.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450357d0755344c80419d03fad52ed56ed8d82cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2099db660184090a7d06bfaa608b199287f8c54a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarWash.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarWash.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
