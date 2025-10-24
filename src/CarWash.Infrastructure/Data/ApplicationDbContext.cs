@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using CarWash.Core.Entities;
+using CarWash.Core.Entities; // <-- 2. ADICIONE ESTE (para encontrar a classe Appointment)
 
 namespace CarWash.Infrastructure.Data
 {
@@ -9,12 +9,12 @@ namespace CarWash.Infrastructure.Data
         {
         }
 
-        public DbSet<Appointment> Appointments { get; set; }
-        
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            // Additional model configuration can be done here
-        }
+        // 3. Registra a tabela 'Appointments'
+        // (O '= default!' corrige o aviso CS8618)
+        public DbSet<Appointment> Appointments { get; set; } = default!;
+
+        // 4. Registra a tabela 'Vehicles'
+        // (Isso corrige o erro CS1061)
+        public DbSet<Vehicle> Vehicles { get; set; } = default!;
     }
 }

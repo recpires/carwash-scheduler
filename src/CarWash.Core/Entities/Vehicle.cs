@@ -1,4 +1,4 @@
-namespace CarWash.Api.Models;
+namespace CarWash.Core.Entities;
 public class Vehicle
 {
     public int Id { get; set; }
