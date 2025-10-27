@@ -1,21 +1,21 @@
-import { Component, OnInit } from "@angular/core";
-import { VehicleService } from "../../services/vehicle.service"; // Importa o serviço
-import { Vehicle } from "../../models/vehicle.model"; // Importa o modelo
+import { Component, OnInit } from '@angular/core';
+import { VehicleService } from '../../services/vehicle.service';
+import { Vehicle } from '../../models/vehicle.model';
 
 @Component({
-  selector: "app-vehicle-list",
-  templateUrl: "./vehicle-list.component.html",
-  styleUrls: ["./vehicle-list.component.css"],
+  selector: 'app-vehicle-list',
+  templateUrl: './vehicle-list.component.html',
+  styleUrls: ['./vehicle-list.component.css']
 })
 export class VehicleListComponent implements OnInit {
-  // Adiciona 'implements OnInit'
 
-  vehicles: Vehicle[] = []; // Uma lista para guardar os veículos
+  vehicles: Vehicle[] = [];
 
-  // Injeta o serviço no construtor
-  constructor(private vehicleService: VehicleService) {}
+  // 1. Objeto para guardar os dados do novo formulário
+  newVehicle: Vehicle = new Vehicle(); 
 
-  // ngOnInit é chamado quando o componente é carregado
+  constructor(private vehicleService: VehicleService) { }
+
   ngOnInit(): void {
     this.loadVehicles();
   }
@@ -24,10 +24,27 @@ export class VehicleListComponent implements OnInit {
     this.vehicleService.getVehicles().subscribe(
       (data: Vehicle[]) => {
         this.vehicles = data;
-        console.log(this.vehicles); // Para vermos no console do navegador
       },
       (error) => {
-        console.error("Erro ao buscar veículos:", error);
+        console.error('Erro ao buscar veículos:', error);
+      }
+    );
+  }
+
+  // 2. Método que é chamado quando o formulário é enviado
+  onSubmit(): void {
+    console.log('Enviando veículo:', this.newVehicle);
+
+    this.vehicleService.addVehicle(this.newVehicle).subscribe(
+      (savedVehicle) => {
+        console.log('Veículo salvo:', savedVehicle);
+
+        // 3. Atualiza a lista na tela e reseta o formulário
+        this.loadVehicles(); // Recarrega a lista do banco
+        this.newVehicle = new Vehicle(); // Limpa o formulário
+      },
+      (error) => {
+        console.error('Erro ao salvar veículo:', error);
       }
     );
   }

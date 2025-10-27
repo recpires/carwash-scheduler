@@ -1,7 +1,32 @@
+<h2>Adicionar Novo Veículo</h2>
+
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label for="make">Marca:</label>
+        <input type="text" id="make" name="make" [(ngModel)]="newVehicle.make" required>
+    </div>
+    <div>
+        <label for="model">Modelo:</label>
+        <input type="text" id="model" name="model" [(ngModel)]="newVehicle.model" required>
+    </div>
+    <div>
+        <label for="year">Ano:</label>
+        <input type="number" id="year" name="year" [(ngModel)]="newVehicle.year" required>
+    </div>
+    <div>
+        <label for="licensePlate">Placa:</label>
+        <input type="text" id="licensePlate" name="licensePlate" [(ngModel)]="newVehicle.licensePlate" required>
+    </div>
+
+    <button type="submit">Salvar Veículo</button>
+</form>
+
+<hr>
+
 <h2>Meus Veículos</h2>
 
 <div *ngIf="vehicles.length === 0">
-    <p>Carregando veículos...</p>
+    <p>Nenhum veículo cadastrado. Adicione um acima!</p>
 </div>
 
 <table *ngIf="vehicles.length > 0">
