@@ -1,0 +1,8 @@
+.full-width-field {
+  width: 100%;
+}
+
+/* Adiciona um espaço entre os campos */
+mat-form-field {
+  margin-bottom: 10px;
+}

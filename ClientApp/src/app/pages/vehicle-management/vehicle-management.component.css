@@ -1,0 +1,16 @@
+.page-container {
+  display: flex;
+  flex-wrap: wrap; /* Faz as colunas quebrarem em telas pequenas */
+  gap: 24px; /* Espaço entre as colunas */
+  padding: 24px; /* Espaço ao redor da página */
+}
+
+.form-section {
+  flex: 1; /* Ocupa 1 parte do espaço */
+  min-width: 350px; /* Largura mínima antes de quebrar */
+}
+
+.list-section {
+  flex: 2; /* Ocupa 2 partes do espaço (mais largo) */
+  min-width: 400px;
+}

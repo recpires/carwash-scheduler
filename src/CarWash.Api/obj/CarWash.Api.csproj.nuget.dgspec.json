@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Programacao\\carwash-scheduler\\src\\CarWash.Api\\CarWash.Api.csproj": {}
+    "D:\\_Programacao\\carwash-scheduler\\src\\carwash.api\\CarWash.Api.csproj": {}
   },
   "projects": {
-    "D:\\_Programacao\\carwash-scheduler\\src\\CarWash.Api\\CarWash.Api.csproj": {
+    "D:\\_Programacao\\carwash-scheduler\\src\\carwash.api\\CarWash.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Programacao\\carwash-scheduler\\src\\CarWash.Api\\CarWash.Api.csproj",
+        "projectUniqueName": "D:\\_Programacao\\carwash-scheduler\\src\\carwash.api\\CarWash.Api.csproj",
         "projectName": "CarWash.Api",
-        "projectPath": "D:\\_Programacao\\carwash-scheduler\\src\\CarWash.Api\\CarWash.Api.csproj",
+        "projectPath": "D:\\_Programacao\\carwash-scheduler\\src\\carwash.api\\CarWash.Api.csproj",
         "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-        "outputPath": "D:\\_Programacao\\carwash-scheduler\\src\\CarWash.Api\\obj\\",
+        "outputPath": "D:\\_Programacao\\carwash-scheduler\\src\\carwash.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config"

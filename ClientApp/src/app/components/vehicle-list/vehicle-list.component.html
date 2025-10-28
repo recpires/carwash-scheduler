@@ -1,49 +1,39 @@
-<h2>Adicionar Novo Veículo</h2>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="vehicles$ | async">
 
-<form (ngSubmit)="onSubmit()">
-    <div>
-        <label for="make">Marca:</label>
-        <input type="text" id="make" name="make" [(ngModel)]="newVehicle.make" required>
-    </div>
-    <div>
-        <label for="model">Modelo:</label>
-        <input type="text" id="model" name="model" [(ngModel)]="newVehicle.model" required>
-    </div>
-    <div>
-        <label for="year">Ano:</label>
-        <input type="number" id="year" name="year" [(ngModel)]="newVehicle.year" required>
-    </div>
-    <div>
-        <label for="licensePlate">Placa:</label>
-        <input type="text" id="licensePlate" name="licensePlate" [(ngModel)]="newVehicle.licensePlate" required>
-    </div>
+        <ng-container matColumnDef="marca">
+            <th mat-header-cell *matHeaderCellDef> Marca </th>
+            <td mat-cell *matCellDef="let vehicle"> {{vehicle.Marca}} </td>
+        </ng-container>
 
-    <button type="submit">Salvar Veículo</button>
-</form>
+        <ng-container matColumnDef="modelo">
+            <th mat-header-cell *matHeaderCellDef> Modelo </th>
+            <td mat-cell *matCellDef="let vehicle"> {{vehicle.Modelo}} </td>
+        </ng-container>
 
-<hr>
+        <ng-container matColumnDef="ano">
+            <th mat-header-cell *matHeaderCellDef> Ano </th>
+            <td mat-cell *matCellDef="let vehicle"> {{vehicle.Ano}} </td>
+        </ng-container>
 
-<h2>Meus Veículos</h2>
+        <ng-container matColumnDef="placa">
+            <th mat-header-cell *matHeaderCellDef> Placa </th>
+            <td mat-cell *matCellDef="let vehicle"> {{vehicle.Placa | uppercase}} </td>
+        </ng-container>
+        <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let vehicle">
+                <button mat-icon-button color="primary" (click)="onEdit(vehicle)" aria-label="Editar">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="onDelete(vehicle)" aria-label="Excluir">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-<div *ngIf="vehicles.length === 0">
-    <p>Nenhum veículo cadastrado. Adicione um acima!</p>
+    </table>
+
 </div>
-
-<table *ngIf="vehicles.length > 0">
-    <thead>
-        <tr>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Ano</th>
-            <th>Placa</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let v of vehicles">
-            <td>{{ v.make }}</td>
-            <td>{{ v.model }}</td>
-            <td>{{ v.year }}</td>
-            <td>{{ v.licensePlate }}</td>
-        </tr>
-    </tbody>
-</table>
